@@ -1,0 +1,13 @@
+{
+    "attachments": [
+        {
+            "fallback": "Required plain-text summary of the attachment.",
+            "color": "#2eb886",
+            "pretext": "SumoLogic Slack Alert Example",
+            "title": "Slack API Documentation",
+            "title_link": "https://api.slack.com/",
+            "footer": "SumoLogic",
+            "footer_icon": "https://media.licdn.com/dms/image/C560BAQGX1RuJigEVng/company-logo_400_400/0?e=1565827200&v=beta&t=MDCdL8YSnC86tfBV24-n351K4EbfzTt0YVqRmpXX8z8"
+        }
+    ]
+}

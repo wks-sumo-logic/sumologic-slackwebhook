@@ -1,0 +1,30 @@
+{
+    "text": "SLACK WEBHOOK Testing -- {{ClientName}} Alert -- Sample Alert Action",
+    "attachments": [
+		{
+        	"fields": [{
+               		"title": "Description",
+                	"value": "{{SearchDescription}}"
+            	},
+           		{
+                	"title": "Query",
+                	"value": "<{{SearchQueryUrl}}|{{SearchQuery}}>"
+            	},
+            	{
+               	 	"title": "Time Range",
+                	"value": "{{TimeRange}}"
+            	},
+            	{
+               	 	"title": "FieldName details",
+               	 	"value": "{{Results.sourcename}} has {{Results.summary}} records"
+            	},
+            	{
+               	 	"title": "Results",
+                	"value": "{{RawResultsJson}}"
+            	}
+        	],
+       		"mrkdwn_in": ["text", "pretext"],
+        	"color": "#00FF00"
+		}
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "text": "CLI Testing -- {{Description}} Alert -- Sample Alert Action",
+    "attachments": [
+	{
+        	"fields": [{
+               		"title": "Description",
+                	"value": "{{SearchDescription}}"
+            	},
+           	{
+                	"title": "Query",
+                	"value": "<{{SearchQueryUrl}}|{{SearchQuery}}>"
+            	},
+            	{
+               	 	"title": "Time Range",
+                	"value": "{{TimeRange}}"
+            	},
+            	{
+               	 	"title": "FieldName",
+               	 	"value": "{{Results.fieldname}}"
+            	},
+            	{
+               	 	"title": "Results",
+                	"value": "{{RawResultsJson}}"
+            	},             
+            	{
+               	 	"title": "Message",
+                	"value": "{{AggregateResultsJson}}"
+           	}
+        	],
+       		"mrkdwn_in": ["text", "pretext"],
+        	"color": "#00FF00"
+	},
+        {
+            "text": "Please Choose your Action",
+            "callback_id": "devops_response",
+            "color": "#FF0000",
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "action",
+                    "text": "learn_more",
+		    "url": "https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-dev-deciders.html",
+                    "type": "button",
+                    "value": "learn_more"
+                },
+                {
+                    "name": "game",
+                    "text": "query_more",
+		    "url": "https://service.sumologic.com/ui/#/search/somethingyoucansearch",
+                    "type": "button",
+                    "value": "query_more"
+                },
+                {
+                    "name": "game",
+                    "text": "fix_issue",
+                    "style": "danger",
+                    "type": "button",
+                    "value": "fix_issue",
+                    "confirm": {
+                        "title": "Are you sure?",
+                        "text": "This will start actions on a remote machine",
+                        "ok_text": "Yes",
+                        "dismiss_text": "No"
+                    }
+                }
+            ]
+	},
+	{
+            "text": "Please choose time frame to review",
+            "callback_id": "os",
+            "color": "#FF0000",
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "this_week",
+                    "text": "This Week",
+            	    "url": "https://service.sumologic.com/ui/#/search/insertyoururlhere1",
+                    "type": "button",
+                    "value": "this_week"
+                },
+                {
+                    "name": "this_month",
+                    "text": "This Month",
+            	    "url": "https://service.sumologic.com/ui/#/search/insertyouurlhere2",
+                    "type": "button",
+                    "value": "this_month"
+                },
+                {
+                    "name": "this_quarter",
+                    "text": "This Quarter",
+            	    "url": "https://service.sumologic.com/ui/#/search/insertyoururlhere3",
+                    "type": "button",
+                    "value": "this_quarter"
+                }
+            ]
+        }
+    ]
+}

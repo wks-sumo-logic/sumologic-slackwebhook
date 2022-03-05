@@ -1,0 +1,90 @@
+{
+    "text": "SLACK WEBHOOK Testing -- {{ClientName}} Alert -- Sample Alert Action",
+    "attachments": [
+	   {
+        	"fields": [
+                {
+               		"title": "Description",
+                	"value": "{{SearchDescription}}"
+            	},
+           	    {
+                	"title": "Query",
+                	"value": "<{{SearchQueryUrl}}|{{SearchQuery}}>"
+            	},
+            	{
+               	 	"title": "Time Range",
+                	"value": "{{TimeRange}}"
+            	},
+            	{
+               	 	"title": "FieldName details",
+               	 	"value": "{{Results.sourcename}} has {{Results.summary}} records"
+            	},
+            	{
+               	 	"title": "Results",
+                	"value": "{{RawResultsJson}}"
+            	}
+        	],
+       		"mrkdwn_in": ["text", "pretext"],
+        	"color": "#00FF00"
+	   },
+       {
+            "text": "Please Choose your Action",
+            "callback_id": "devops_response",
+            "color": "#FF0000",
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "action",
+                    "text": "see_history",
+                    "type": "button",
+                    "value": "see_history"
+                },
+                {
+                    "name": "game",
+                    "text": "query_more",
+                    "type": "button",
+                    "value": "query_more"
+                },
+                {
+                    "name": "game",
+                    "text": "fix_issue",
+                    "style": "danger",
+                    "type": "button",
+                    "value": "fix_issue",
+                    "confirm": {
+                        "title": "Are you sure?",
+                        "text": "This will start actions on a remote machine",
+                        "ok_text": "Yes",
+                        "dismiss_text": "No"
+                    }
+                }
+            ]
+	   },
+       {
+            "text": "Please choose time frame to review",
+            "callback_id": "os",
+            "color": "#FF0000",
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "this_week",
+                    "text": "This Week",
+                    "type": "button",
+                    "value": "this_week"
+                },
+                {
+                    "name": "this_month",
+                    "text": "This Month",
+                    "type": "button",
+                    "value": "this_month"
+                },
+                {
+                    "name": "this_quarter",
+                    "text": "This Quarter",
+                    "type": "button",
+                    "value": "this_quarter"
+                }
+            ]
+        }
+    ]
+}

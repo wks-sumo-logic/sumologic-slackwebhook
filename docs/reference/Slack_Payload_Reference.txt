@@ -1,0 +1,51 @@
+-----------------------
+
+https://help.sumologic.com/Manage/Connections-and-Integrations/Webhook-Connections/Webhook-Connection-for-Slack
+https://help.sumologic.com/Manage/Connections-and-Integrations/Webhook-Connections/Set-Up-Webhook-Connections#Webhook_Payload_Variables
+
+-----------------------
+
+ {{SearchName}}
+
+Description of the saved search or Monitor. In the delivered payload, this variable is replaced by the Name you assigned to the search or Monitor when you created it.
+
+ {{SearchDescription}}
+
+Description of the saved search or Monitor. In the delivered payload, this variable is replaced by the Description you assigned to the search or Monitor when you created it.
+
+ {{SearchQuery}}
+
+The query used to run the saved search. In the delivered payload, this variable is replaced by your saved search query or metric query.
+ 
+ {{SearchQueryUrl}}
+
+The URL link to the search or metrics query. In the delivered payload, this is a URL that you can click to run the saved search or metric query.
+
+ {{TimeRange}}
+
+Time range used to run the search or time range that triggered the metrics alert. In the delivered payload, this variable will be replaced by the time range for the log or metric query.
+
+ {{FireTime}}
+
+The start time of the log search or metric query that triggered the notification.
+
+ {{AggregateResultsJson}}
+
+JSON object containing search aggregation results.
+
+A maximum of 200 aggregate results can be sent via WebHook.
+
+ {{RawResultsJson}}
+
+JSON object containing raw messages.
+A maximum of 10 raw messages can be sent via WebHook
+
+ {{NumRawResults}}
+
+Number of results returned by the search.
+
+ {{Results.fieldname}}
+
+The value returned from the search result for the specified field name. This is useful for creating an easy-to-read Slack message based on your query results.
+
+A maximum of 200 results for this field can be sent via WebHook.

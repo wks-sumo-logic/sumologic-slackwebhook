@@ -1,0 +1,64 @@
+{
+    "text": "I want to live! Please build me.",
+    "attachments": [
+        {
+            "pretext": "Choose a game to play",
+            "text": "Wargames",
+            "callback_id": "wopr_game",
+            "color": "#00FF00",
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "game",
+                    "text": "Chess",
+                    "type": "button",
+                    "value": "chess"
+                },
+                {
+                    "name": "game",
+                    "text": "Falken's Maze",
+                    "type": "button",
+                    "value": "maze"
+                },
+                {
+                    "name": "game",
+                    "text": "Thermonuclear War",
+                    "style": "danger",
+                    "type": "button",
+                    "value": "war",
+                    "confirm": {
+                        "title": "Are you sure?",
+                        "text": "Wouldn't you prefer a good game of chess?",
+                        "ok_text": "Yes",
+                        "dismiss_text": "No"
+                    }
+                }
+            ],
+	    "footer": "SumoLogic",
+            "footer_icon": "https://media.licdn.com/dms/image/C560BAQGX1RuJigEVng/company-logo_400_400/0?e=1565827200&v=beta&t=MDCdL8YSnC86tfBV24-n351K4EbfzTt0YVqRmpXX8z8"
+	},
+	{
+            "pretext": "I'll tell you how to set up your system.:robot_face:",
+            "text": "What operating system are you using?",
+            "callback_id": "os",
+            "color": "#00FF00",
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "mac",
+                    "text": ":apple: Mac",
+                    "type": "button",
+                    "value": "mac"
+                },
+                {
+                    "name": "windows",
+                    "text": ":fax: Windows",
+                    "type": "button",
+                    "value": "win"
+                }
+            ],
+	    "footer": "SumoLogic",
+            "footer_icon": "https://media.licdn.com/dms/image/C560BAQGX1RuJigEVng/company-logo_400_400/0?e=1565827200&v=beta&t=MDCdL8YSnC86tfBV24-n351K4EbfzTt0YVqRmpXX8z8"
+        }
+    ]
+}
