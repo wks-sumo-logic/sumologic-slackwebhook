@@ -13,7 +13,7 @@ Read on! Hopefully this repository is just the thing you need.
 Content Tree
 ============
 
-'''
+```
 .
 ├── LICENSE
 ├── README.md
@@ -39,7 +39,7 @@ Content Tree
         ├── Step.001.Slack-Setup.pdf
         ├── Step.002.SumoLogic-Setup.docx
         └── Step.002.SumoLogic-Setup.pdf
-'''
+```
 
 Installation Steps
 ==================
